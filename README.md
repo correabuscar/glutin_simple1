@@ -10,7 +10,7 @@ This flickering issue is happening only when all of the below are true at the sa
 NVidia G-SYNC is enabled for windowed mode
 </summary>
 
-[![TODO: fix link here](https://github.com/correabuscar/glutin_simple1/blob/main/nvidiagsync.jpg)](https://github.com/correabuscar/glutin_simple1/blob/main/nvidiagsync.jpg)
+[![gsync link](https://github.com/correabuscar/glutin_simple1/blob/main/nvidiagsync.jpg)](https://github.com/correabuscar/glutin_simple1/blob/main/nvidiagsync.jpg)
 
 </details>
 
@@ -19,8 +19,14 @@ NVidia G-SYNC is enabled for windowed mode
 <details>
 
 <summary>
-displayed on an LG 24UD58-B monitor (manufactured: January 2018) with FreeSync->Extended (but not with Basic, or Off) setting.
+displayed on an LG 24UD58-B monitor (manufactured: January 2018) with FreeSync->Extended (but not with Basic, or Off) setting in its OSD menu(The on-screen display menu).
 </summary>
+
+[![OSD1of3](https://github.com/correabuscar/glutin_simple1/blob/main/1IMG_20230503_101327-1.jpg)](https://github.com/correabuscar/glutin_simple1/blob/main/1IMG_20230503_101327-1.jpg)
+
+[![OSD2of3](https://github.com/correabuscar/glutin_simple1/blob/main/2IMG_20230503_101338-1.jpg)](https://github.com/correabuscar/glutin_simple1/blob/main/2IMG_20230503_101338-1.jpg)
+
+[![OSD3of3](https://github.com/correabuscar/glutin_simple1/blob/main/3IMG_20230503_101350-1.jpg)](https://github.com/correabuscar/glutin_simple1/blob/main/3IMG_20230503_101350-1.jpg)
 
 </details>
 
@@ -29,10 +35,13 @@ displayed on an LG 24UD58-B monitor (manufactured: January 2018) with FreeSync->
 <summary>
 `context.swap_buffers()` is called either directly(as it is in this here project) or indirectly (iced, egui)
 </summary>
+
+https://github.com/correabuscar/glutin_simple1/blob/00bbecfdc7b6a511da0656ce67fc1b192fe2d450/src/main.rs#L44
+
 </details>
 
 The following video attempts to show the SUBTLE flickering that happens only when resizing of window is going on(as this is when `swap_buffers()` is called, but not when moving the window), but this flickering is much more visible when viewed on mobile screens and is almost imperceptible(except in real life) otherwise:
 
 
-[![TODO: add link here](https://raw.githubusercontent.com/correabuscar/glutin_simple1/main/thisVID_20230503_100650.mp4)](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)
+[![click to open video in new tab then choose Raw](https://raw.githubusercontent.com/correabuscar/glutin_simple1/main/thisVID_20230503_100650.mp4)](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)
 
