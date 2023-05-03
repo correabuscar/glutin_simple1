@@ -6,15 +6,12 @@ extern crate gl;
 extern crate glutin;
 extern crate winit;
 
-
 use glutin::ContextBuilder;
 use winit::{
     event::{Event, WindowEvent},
     event_loop::{ControlFlow, EventLoop},
     window::WindowBuilder,
 };
-
-
 
 fn main() {
     let event_loop = EventLoop::new();
@@ -29,7 +26,6 @@ fn main() {
     gl::load_with(|s| context.get_proc_address(s) as *const _);
 
     event_loop.run(move |event, _, control_flow| {
-
         match event {
             Event::WindowEvent {
                 event: WindowEvent::CloseRequested,
@@ -46,13 +42,9 @@ fn main() {
                 // }
 
                 context.swap_buffers().unwrap();
-
             }
 
-            _ => {
-
-                ()
-            },
+            _ => (),
         }
     });
 }
