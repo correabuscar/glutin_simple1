@@ -45,3 +45,9 @@ The following video attempts to show the SUBTLE flickering that happens only whe
 
 [![click to open video in new tab then choose Raw](https://raw.githubusercontent.com/correabuscar/glutin_simple1/main/thisVID_20230503_100650.mp4)](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)
 
+
+Workaround
+==========
+
+Use FreeSync->Basic (or Off)
+
