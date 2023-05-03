@@ -34,5 +34,5 @@ displayed on an LG 24UD58-B monitor (manufactured: January 2018) with FreeSync->
 The following video attempts to show the SUBTLE flickering that happens only when resizing of window is going on(as this is when `swap_buffers()` is called, but not when moving the window), but this flickering is much more visible when viewed on mobile screens and is almost imperceptible(except in real life) otherwise:
 
 
-[![TODO: add link here](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)
+[![TODO: add link here](https://raw.githubusercontent.com/correabuscar/glutin_simple1/main/thisVID_20230503_100650.mp4)](https://github.com/correabuscar/glutin_simple1/blob/main/thisVID_20230503_100650.mp4)
 
