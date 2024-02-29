@@ -7,7 +7,7 @@ extern crate glutin;
 extern crate winit;
 
 use glutin::ContextBuilder;
-use winit::{
+use glutin::{
     event::{Event, WindowEvent},
     event_loop::{ControlFlow, EventLoop},
     window::WindowBuilder,
