@@ -51,3 +51,7 @@ Workaround
 
 Use FreeSync->Basic (or Off)
 
+WARNING
+=======
+
+While running it uses 100% CPU (in top, aka 1 full core), so don't let it run unsupervised. Unsure if it needs to run this fast, else I could've put a delay in the loop. I'm unable to (re)test at the time of writing this line.  
