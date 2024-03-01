@@ -12,7 +12,7 @@ version = "1.0.0";
 src = pkgs.fetchFromGitHub {
 owner = "correabuscar";
 repo = pname;
-rev = "master";
+rev = "e8894ff97653f911192093e181559832b05deb85";
 hash = "sha256-Yior+F4bLEosumNNWftC5gNAQUwLyif6NYYdlBg2Mws=";
 };
 
