@@ -1,5 +1,7 @@
 #!/usr/bin/env nix-shell
-#! nix-shell -i bash -p pkg-config -p xorg.libX11.dev -p xorg.libXcursor.dev -p xorg.libXrandr.dev -p xorg.libXi.dev -p xorg.libXext.dev -p xorg.libXxf86vm.dev -p xorg.libXft.dev -p xorg.libXinerama.dev -p xorg.libXmu.dev -p xorg.libXtst -p xorg.libXrender.dev -p xorg.libXpresent -p xorg.libXScrnSaver -p xorg.libXt.dev -p libGL.dev -p xorg.libX11 -p xorg.libXcursor -p xorg.libXrandr -p xorg.libXi -p xorg.libXext -p xorg.libXxf86vm -p xorg.libXft -p xorg.libXinerama -p xorg.libXmu -p xorg.libXtst -p xorg.libXrender -p xorg.libXpresent -p xorg.libXScrnSaver -p xorg.libXt -p libGL -p mesa -p mesa.dev -p libdrm -p libdrm.dev -p vkd3d
+#! nix-shell -i bash -p pkg-config -p xorg.libX11.dev -p xorg.libXcursor.dev -p xorg.libXrandr.dev -p xorg.libXi.dev -p xorg.libXext.dev -p xorg.libXxf86vm.dev -p xorg.libXft.dev -p xorg.libXinerama.dev -p xorg.libXmu.dev -p xorg.libXtst -p xorg.libXrender.dev -p xorg.libXpresent -p xorg.libXScrnSaver -p xorg.libXt.dev -p libGL.dev
+
+#-p xorg.libX11 -p xorg.libXcursor -p xorg.libXrandr -p xorg.libXi -p xorg.libXext -p xorg.libXxf86vm -p xorg.libXft -p xorg.libXinerama -p xorg.libXmu -p xorg.libXtst -p xorg.libXrender -p xorg.libXpresent -p xorg.libXScrnSaver -p xorg.libXt -p libGL -p mesa -p mesa.dev -p libdrm -p libdrm.dev -p vkd3d
 
 cd ../..
 
