@@ -1,0 +1,42 @@
+on virtualbox (without 3D checkbox enabled because if won't boot into X otherwise), this fails like the following:
+
+...
+     53744:         entry: 0x00007f7303277000  phdr: 0x00007f7303277040  phnum:                 11
+     53744:
+     53744:
+     53744:     file=/nix/store/fa9ds25v33ncb06hpi3l1lx2w8q6ly94-wayland-1.22.0/lib/libwayland-client.so.0 [0];  needed by /nix/store/fa9ds25v33ncb06hpi3l1lx2w8q6ly94-wayland-1.22.0/lib/libwayland-server.so.0 [0] (relocation dependency)
+     53744:
+     53744:
+     53744:     file=/nix/store/fa9ds25v33ncb06hpi3l1lx2w8q6ly94-wayland-1.22.0/lib/libwayland-client.so.0 [0];  needed by /nix/store/djpdhfpjmks25h5vff1daz10w1mrs7s7-mesa-23.1.9/lib/libgbm.so.1 [0] (relocation dependency)
+     53744:
+     53744:
+     53744:     calling init: /nix/store/fa9ds25v33ncb06hpi3l1lx2w8q6ly94-wayland-1.22.0/lib/libwayland-server.so.0
+     53744:
+     53744:
+     53744:     calling init: /nix/store/fa9ds25v33ncb06hpi3l1lx2w8q6ly94-wayland-1.22.0/lib/libwayland-client.so.0
+     53744:
+     53744:
+     53744:     calling init: /nix/store/djpdhfpjmks25h5vff1daz10w1mrs7s7-mesa-23.1.9/lib/libgbm.so.1
+     53744:
+     53744:
+     53744:     calling init: /nix/store/vygbkppsbhdrbx6799b482z0xvlk7jwm-mesa-23.1.9-drivers/lib/libEGL_mesa.so.0
+     53744:
+     53744:     opening file=/nix/store/vygbkppsbhdrbx6799b482z0xvlk7jwm-mesa-23.1.9-drivers/lib/libEGL_mesa.so.0 [0]; direct_opencount=1
+     53744:
+     53744:     /nix/store/aszz7cfj23arxclk4s9s79lhb6f76rig-libGL-1.7.0/lib/libEGL.so.1: error: symbol lookup error: undefined symbol: eglCreatePlatformWindowSurfaceEXT (fatal)
+     53744:     /nix/store/aszz7cfj23arxclk4s9s79lhb6f76rig-libGL-1.7.0/lib/libEGL.so.1: error: symbol lookup error: undefined symbol: eglGetPlatformDisplayEXT (fatal)
+     53744:     /nix/store/aszz7cfj23arxclk4s9s79lhb6f76rig-libGL-1.7.0/lib/libEGL.so.1: error: symbol lookup error: undefined symbol: eglSwapBuffersWithDamageKHR (fatal)
+libEGL warning: DRI2: failed to authenticate
+     53744:
+     53744:     file=/run/opengl-driver/lib/dri/tls/swrast_dri.so [0];  dynamically loaded by /nix/store/vygbkppsbhdrbx6799b482z0xvlk7jwm-mesa-23.1.9-drivers/lib/libEGL_mesa.so.0 [0]
+     53744:     opening file=/run/opengl-driver/lib/dri/swrast_dri.so [0]; direct_opencount=2
+     53744:
+     53744:
+     53744:     file=libd3d12.so [0];  dynamically loaded by /run/opengl-driver/lib/dri/swrast_dri.so [0]
+thread 'main' panicked at src/main.rs:22:10:
+called `Result::unwrap()` on an `Err` value: CreationErrors([NoAvailablePixelFormat, OsError("Couldn't find any available vsync extension")])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+     53744:
+     53744:     calling fini:  [0]
+...
+

@@ -1,0 +1,1 @@
+LD_DEBUG=files ./result/bin/glutin_simple1
