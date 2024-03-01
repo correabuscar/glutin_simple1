@@ -1,0 +1,11 @@
+#!/usr/bin/env nix-shell
+#! nix-shell -i bash -p pkg-config -p xorg.libX11.dev -p xorg.libXcursor.dev -p xorg.libXrandr.dev -p xorg.libXi.dev -p xorg.libXext.dev -p xorg.libXxf86vm.dev -p xorg.libXft.dev -p xorg.libXinerama.dev -p xorg.libXmu.dev -p xorg.libXtst -p xorg.libXrender.dev -p xorg.libXpresent -p xorg.libXScrnSaver -p xorg.libXt.dev -p libGL.dev
+
+
+#export PKG_CONFIG_PATH=/run/current-system/sw/lib/pkgconfig/
+cargo clean #needed if you didn't already have pkg-config OR any of the required libs! (because it caches their location to search for in a config.rs at build time due to how x11-dl operates by using pkg-config at build time. Now that I use nix-shell shebang, this clean wouldn't be needed tho.
+#cargo run
+LD_LIBRARY_PATH="$(PKG_CONFIG_PATH=/run/current-system/sw/lib/pkgconfig/ pkg-config gl --libs-only-L | sed -e 's/^-L//')" PKG_CONFIG_PATH="$(PKG_CONFIG_PATH=/run/current-system/sw/lib/pkgconfig/ pkg-config gl --cflags-only-I | sed -e 's/^-I//;s#$#/../lib/pkgconfig#'):/run/current-system/sw/lib/pkgconfig/" RUST_BACKTRACE=1 cargo run
+#^ sample:
+#LD_LIBRARY_PATH=/nix/store/yyq17nysfq3sf0g6r3m7sp4njz5b2zm5-libglvnd-1.7.0/lib PKG_CONFIG_PATH=/nix/store/5mvdnk1sjqmci47yccarijmsnkpl332m-libglvnd-1.7.0-dev/lib/pkgconfig/:/run/current-system/sw/lib/pkgconfig/ cargo run
+
